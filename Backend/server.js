@@ -240,6 +240,10 @@ app.post('/api/expenses', async (req, res, next) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send("This is from home page")
+})
+
 // ---------- SET BUDGET ----------
 app.post('/api/budgets', async (req, res, next) => {
     const token = extractToken(req);
