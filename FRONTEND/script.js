@@ -1,5 +1,5 @@
 // ---------- API CONFIG ----------
-const API_BASE_URL = 'http://localhost:5000'; // Change this if port differs
+const API_BASE_URL = 'https://student-expense-tracker-bnia.onrender.com'; // Change this if port differs
 
 // ---------- HELPER FUNCTION: SHOW TOAST ----------
 function showToast(text, type = 'success', duration = 3000) {
