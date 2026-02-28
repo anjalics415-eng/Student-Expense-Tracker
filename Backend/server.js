@@ -272,6 +272,10 @@ app.post('/api/budgets', async (req, res, next) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send("This is from home page")
+})
+
 // ---------- GET USER DATA (FOR DASHBOARD) ----------
 app.get('/api/user', async (req, res, next) => {
     const token = extractToken(req);
