@@ -1,13 +1,60 @@
-<h2>Expense Dashboard</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<button onclick="logout()">Logout</button>
+<div class="sidebar">
+    <div class="sidebar-title">Finance Summary</div>
+    <div class="sidebar-section">
+        <div class="sidebar-label">Budget</div>
+        <div class="sidebar-value">₹<span id="sidebarBudget">0</span></div>
+    </div>
+    <div class="sidebar-section">
+        <div class="sidebar-label">Total Expense</div>
+        <div class="sidebar-value">₹<span id="sidebarExpense">0</span></div>
+    </div>
+    
+    <hr style="border: 1px solid rgba(0, 255, 0, 0.3); margin: 15px 0;">
+    
+    <div class="sidebar-title" style="font-size: 16px; margin: 10px 0;">Recent Expenses</div>
+    <div id="expensesList" class="expenses-list"></div>
+    
+    <hr style="border: 1px solid rgba(0, 255, 0, 0.3); margin: 15px 0;">
+    
+    <div class="sidebar-section">
+        <div class="sidebar-label">Remaining Balance</div>
+        <div class="sidebar-value" id="sidebarRemaining">₹<span id="sidebarBalance">0</span></div>
+        <div id="exceedMessage" style="display: none; color: #ff6666; font-size: 12px; margin-top: 8px; font-weight: bold;"></div>
+    </div>
+</div>
 
-<br><br>
+<div class="container">
+    <h2>Expense Dashboard</h2>
 
-<input type="text" id="expenseName" placeholder="Expense Name">
-<input type="number" id="expenseAmount" placeholder="Amount">
-<button onclick="addExpense()">Add Expense</button>
+    <div>
+        <input type="number" id="budget" placeholder="Set Budget" min="0">
+        <button type="button" onclick="setBudget()">Set Budget</button>
+    </div>
 
-<h3 id="expenseList"></h3>
+    <hr>
+
+    <div>
+        <input type="text" id="expenseName" placeholder="Expense Name">
+        <input type="number" id="expenseAmount" placeholder="Amount" min="0">
+        <button type="button" onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <hr>
+
+    <button type="button" onclick="clearAllData()" style="background: #ff6666; box-shadow: 0 0 15px #ff6666;">Clear All Data</button>
+    <button type="button" onclick="logout()">Logout</button>
+</div>
+
+<div id="toast-container"></div>
 
 <script src="script.js"></script>
+</body>
+</html>

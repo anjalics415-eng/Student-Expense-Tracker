@@ -1,9 +1,28 @@
-<h2>Register</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<input type="text" id="name" placeholder="Name">
-<input type="email" id="email" placeholder="Email">
-<input type="password" id="password" placeholder="Password">
+<div class="container">
+    <h2>Student Expense App</h2>
+    <h3 style="color: #00c3ff; margin-bottom: 20px;">Register</h3>
 
-<button onclick="registerUser()">Register</button>
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password (min 6 chars)" required>
+
+    <button type="button" onclick="registerUser()">Register</button>
+
+    <div id="message"></div>
+
+    <p class="link-text" onclick="window.location.href='login.html'">
+        Already have an account? Login here
+    </p>
+</div>
 
 <script src="script.js"></script>
+</body>
+</html>

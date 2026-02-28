@@ -1,0 +1,19 @@
+{
+  "name": "student-expense-app",
+  "version": "1.0.0",
+  "description": "Student Expense Tracking Application",
+  "private": true,
+  "scripts": {
+    "start:backend": "cd FRONTEND/Backend && node server.js",
+    "dev:backend": "cd FRONTEND/Backend && npm run dev",
+    "install:all": "npm install && cd FRONTEND/Backend && npm install"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.3"
+  }
+}
+
