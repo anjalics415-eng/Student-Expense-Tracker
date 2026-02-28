@@ -4,9 +4,7 @@
   "description": "Student Expense Tracking Application",
   "private": true,
   "scripts": {
-    "start:backend": "cd FRONTEND/Backend && node server.js",
-    "dev:backend": "cd FRONTEND/Backend && npm run dev",
-    "install:all": "npm install && cd FRONTEND/Backend && npm install"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
